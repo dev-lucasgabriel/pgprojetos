@@ -1,3 +1,4 @@
+/* Estilos gerais */
 * {
   padding: 0;
   margin: 0;
@@ -84,35 +85,6 @@ body {
   color: #24292f;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--surface-color);
-  text-align: center;
-  padding: 20px 0;
-}
-
-.voltar button {
-  background: transparent;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: var(--text-color);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.voltar button a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-.voltar button:hover {
-  background-color: var(--highlight-color);
-}
-
 /* Estilos para o botão de alternância (Light/Dark Mode) */
 #switch {
   position: fixed; /* Fixo no topo da tela */
@@ -151,6 +123,30 @@ footer {
 
 #switch button:hover {
   outline: 8px solid var(--highlight-color);
+}
+
+/* Estilos para o botão "Voltar" fixado no centro inferior */
+.voltar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  text-align: center;
+}
+
+.voltar button {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.voltar button:hover {
+  background-color: var(--highlight-color);
 }
 
 /* Media queries para diferentes tamanhos de tela */
