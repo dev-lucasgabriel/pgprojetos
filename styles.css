@@ -35,6 +35,7 @@ body {
   transition: background 0.3s ease;
   flex-direction: column;
   padding: 10px;
+  overflow-x: hidden; /* Garante que a barra de rolagem horizontal não apareça */
 }
 
 .container {
@@ -43,7 +44,7 @@ body {
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
-  margin-top: 60px; /* Espaço para o botão de alternância */
+  margin-top: 80px; /* Ajuste o espaço entre o botão e as imagens */
   margin-bottom: 20px;
 }
 
@@ -158,6 +159,7 @@ body {
   .container {
     flex-direction: column;
     gap: 20px;
+    margin-top: 50px; /* Ajuste o espaço para a tela de celular */
   }
 
   .image-item {
