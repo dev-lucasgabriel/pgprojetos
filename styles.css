@@ -84,30 +84,33 @@ body {
   color: #24292f;
 }
 
-.voltar {
+footer {
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  width: 100%;
+  background-color: var(--surface-color);
+  text-align: center;
+  padding: 20px 0;
 }
 
 .voltar button {
-  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--text-color);
   border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .voltar button a {
   text-decoration: none;
-  transition: 0.6s;
-  display: flex;
-  margin: 5px;
-  padding: 0px;
-  border-radius: 8px;
-  background-color: transparent;
+  color: var(--text-color);
 }
 
 .voltar button:hover {
-  outline: 8px solid rgb(214, 65, 65), rgb(255, 133, 133);
+  background-color: var(--highlight-color);
 }
 
 /* Estilos para o botão de alternância (Light/Dark Mode) */
