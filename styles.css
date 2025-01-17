@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/assets/sun.svg);
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  transition: background 0.3s ease;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.image-item {
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  margin: 10px;
+}
+
+.imagem {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.imagem:hover {
+  transform: scale(1.05);
+}
+
+.image-text {
+  font-size: 16px;
+  color: var(--text-color);
+  margin-top: 8px;
+}
+
+.github-icon {
+  font-size: 30px;
+  color: var(--text-color);
+  margin-top: 8px;
+  transition: color 0.3s ease;
+}
+
+.github-icon:hover {
+  color: #24292f;
+}
+
+.voltar {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.voltar button {
+  align-items: center;
+  border-radius: 8px;
+}
+
+.voltar button a {
+  text-decoration: none;
+  transition: 0.6s;
+  display: flex;
+  margin: 5px;
+  padding: 0px;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.voltar button:hover {
+  outline: 8px solid rgb(214, 65, 65), rgb(255, 133, 133);
+}
+
+/* Estilos para o botão de alternância (Light/Dark Mode) */
+#switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border-radius: 999px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+  transition: background-color 0.3s ease;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.light #switch button {
+  transform: translateX(40px); /* Move o botão para a direita no modo claro */
+}
+
+#switch span {
+  display: none;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+
+/* Media queries para diferentes tamanhos de tela */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-item {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .imagem {
+    width: 100%;
+    border-radius: 8px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    gap: 25px;
+  }
+
+  .image-item {
+    width: 48%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    gap: 30px;
+  }
+
+  .image-item {
+    width: 30%;
+  }
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/assets/bg-desktop-light.jpg);
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucas Gabriel</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- Botão de alternância do Light/Dark Mode -->
+    <div id="switch" onclick="toggleMode()">
+      <button></button>
+      <span></span>
+    </div>
+
+    <!-- Imagens centralizadas com links e texto abaixo -->
+    <div class="container">
+
+      <div class="image-item">
+        <a href="https://dev-lucasgabriel.github.io/portf-lio/" target="_blank">
+          <img src="./assets/assets/img curriculo.png" alt="Imagem 1" class="imagem">
+        </a>
+        <p class="image-text">Currículo</p>
+        <!-- Ícone do GitHub abaixo do texto com link -->
+        <a href="https://github.com/dev-lucasgabriel/portf-lio.git" target="_blank">
+          <ion-icon name="logo-github" class="github-icon"></ion-icon>
+        </a>
+      </div>
+     
+      <div class="image-item">
+        <a href="https://dev-lucasgabriel.github.io/Spotify/" target="_blank">
+          <img src="/assets/assets/img spotify.jpeg" alt="Imagem 2" class="imagem">
+        </a>
+        <p class="image-text">Spotify</p>
+        <!-- Ícone do GitHub abaixo do texto com link -->
+        <a href="https://github.com/dev-lucasgabriel/Spotify.git" target="_blank">
+          <ion-icon name="logo-github" class="github-icon"></ion-icon>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Botão de Voltar -->
+    <div class="voltar">
+      <button>
+        <a href="https://dev-lucasgabriel.github.io/portf-lio/">Voltar</a>
+      </button>
+    </div>
+
+    <!-- Script para Light/Dark Mode -->
+    <script>
+      function toggleMode() {
+        const html = document.documentElement
+        // Alterna a classe 'light' no elemento HTML
+        html.classList.toggle("light");
+      }
+    </script>
+    <!-- Ionicons para o ícone do GitHub -->
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+  </body>
+</html>
