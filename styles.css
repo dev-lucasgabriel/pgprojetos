@@ -28,7 +28,7 @@ body {
   background: var(--bg-url) no-repeat top center/cover;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-family: 'Inter', sans-serif;
   color: var(--text-color);
@@ -43,6 +43,7 @@ body {
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
+  margin-top: 60px; /* Espaço para o botão de alternância */
   margin-bottom: 20px;
 }
 
@@ -110,9 +111,10 @@ body {
 
 /* Estilos para o botão de alternância (Light/Dark Mode) */
 #switch {
-  position: absolute;
+  position: fixed; /* Fixo no topo da tela */
   top: 20px;
-  right: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
   cursor: pointer;
   width: 64px;
   height: 24px;
